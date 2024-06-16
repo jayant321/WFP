@@ -1,0 +1,28 @@
+Technical Summary: Processing Raster Data and Challenges Faced
+
+In a recent project involving processing raster data, several steps were undertaken to extract meaningful information. The primary objectives were to compute statistical values within specific geographic boundaries and save the results in vector format. The process involved the following key steps:
+
+Data Acquisition and Preparation:
+
+Raster data in TIFF format containing rainfall information for specific time periods (dekads) was obtained from a designated directory.
+An administrative boundary in GeoJSON format was used to define the geographic region of interest.
+Data Processing:
+
+Raster data was read using the rasterio library, and the affine transform was extracted from a sample raster file to align the data with geographic coordinates.
+The data was processed to compute the 95th percentile for the first dekad (dekad1) and the mean for the third dekad (dekad3) of March 2024.
+Challenges Faced:
+
+One of the major challenges encountered was related to the affine transform and bounding box alignment. It was observed that the absence of a proper affine transform caused errors during processing, leading to difficulties in aligning raster data with geographic coordinates accurately.
+Significant time was spent troubleshooting and fixing issues related to the bounding box and data transformation. This resulted in delays and impacted the overall progress of the task.
+Incomplete Task:
+
+Due to the complexities arising from the affine transform and bounding box challenges, the task to compute population statistics within the defined geographic boundaries could not be completed within the expected timeframe.
+The focus had to be redirected towards resolving technical issues, which led to the task remaining unfinished.
+Output Generation:
+
+Despite the challenges, the code successfully computed the statistical values (95th percentile and mean) for dekad1 and dekad3 within the administrative boundary.
+The results were saved in vector format (Shapefile) using the geopandas library, creating separate files for dekad1 and dekad3 with the computed statistical values.
+Lessons Learned:
+
+The project highlighted the importance of thorough data preparation, including proper handling of affine transforms and ensuring data alignment with geographic coordinates.
+It underscored the need for robust error handling and troubleshooting mechanisms to address technical challenges effectively and prevent significant time wastage.
